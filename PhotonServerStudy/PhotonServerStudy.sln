@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGameServer", "MyGameServer\MyGameServer.csproj", "{17BBA3B7-A567-443E-BD47-89E3ACDFF21B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{1BDBA46F-269A-4A3B-A3A1-F491C5913D99}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17BBA3B7-A567-443E-BD47-89E3ACDFF21B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17BBA3B7-A567-443E-BD47-89E3ACDFF21B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17BBA3B7-A567-443E-BD47-89E3ACDFF21B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17BBA3B7-A567-443E-BD47-89E3ACDFF21B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BDBA46F-269A-4A3B-A3A1-F491C5913D99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BDBA46F-269A-4A3B-A3A1-F491C5913D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BDBA46F-269A-4A3B-A3A1-F491C5913D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BDBA46F-269A-4A3B-A3A1-F491C5913D99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
+		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
+	EndGlobalSection
+EndGlobal

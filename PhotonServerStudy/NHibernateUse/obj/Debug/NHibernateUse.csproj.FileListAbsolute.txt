@@ -1,0 +1,13 @@
+G:\PhotonServer\ServerStudy\PhotonServerStudy\NHibernateUse\bin\Debug\sikiedu.exe.config
+G:\PhotonServer\ServerStudy\PhotonServerStudy\NHibernateUse\bin\Debug\Sikiedu.exe
+G:\PhotonServer\ServerStudy\PhotonServerStudy\NHibernateUse\bin\Debug\Sikiedu.pdb
+G:\PhotonServer\ServerStudy\PhotonServerStudy\NHibernateUse\bin\Debug\Iesi.Collections.dll
+G:\PhotonServer\ServerStudy\PhotonServerStudy\NHibernateUse\bin\Debug\MySql.Data.dll
+G:\PhotonServer\ServerStudy\PhotonServerStudy\NHibernateUse\bin\Debug\NHibernate.dll
+G:\PhotonServer\ServerStudy\PhotonServerStudy\NHibernateUse\bin\Debug\Iesi.Collections.xml
+G:\PhotonServer\ServerStudy\PhotonServerStudy\NHibernateUse\bin\Debug\MySql.Data.xml
+G:\PhotonServer\ServerStudy\PhotonServerStudy\NHibernateUse\bin\Debug\NHibernate.xml
+G:\PhotonServer\ServerStudy\PhotonServerStudy\NHibernateUse\obj\Debug\NHibernateUse.csprojResolveAssemblyReference.cache
+G:\PhotonServer\ServerStudy\PhotonServerStudy\NHibernateUse\obj\Debug\Sikiedu.exe
+G:\PhotonServer\ServerStudy\PhotonServerStudy\NHibernateUse\obj\Debug\Sikiedu.pdb
+G:\PhotonServer\ServerStudy\PhotonServerStudy\NHibernateUse\bin\Debug\hibernate.cfg.xml
