@@ -1,0 +1,5 @@
+{
+  "GameVersion": "1.0.1",
+  "InternalVersion": 0,
+  "CheckVersionUrl": "http://127.0.0.1:80/GameApp_Mahjong/windows/version.txt"
+}

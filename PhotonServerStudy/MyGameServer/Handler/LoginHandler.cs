@@ -19,18 +19,17 @@ namespace MyGameServer.Handler
 
         public override void OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters, ClientPeer peer)
         {
-            string userName = DictTool.GetValue<byte, object>(operationRequest.Parameters,(byte)ParameterCode.UserName) as string;
-            string passWord = DictTool.GetValue<byte, object>(operationRequest.Parameters, (byte)ParameterCode.PassWord) as string;
+            LoginData loginData = DictTool.GetProtoByDtoData<LoginData>(operationRequest.Parameters,ParameterCode.LoginData);
 
             UserManager manager = new UserManager();
-            bool isSuccess = manager.VerifyUser(userName, passWord);
+            bool isSuccess = manager.VerifyUser(loginData.UserName, loginData.PassWord);
 
             OperationResponse response = new OperationResponse(operationRequest.OperationCode);
 
             if (isSuccess)
             {
                 response.ReturnCode = (short)ReturnCode.Success;
-                peer.userName = userName;
+                peer.userName = loginData.UserName;
             }
             else
             {

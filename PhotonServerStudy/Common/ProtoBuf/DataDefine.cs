@@ -20,18 +20,314 @@ public static partial class DataDefineReflection {
   static DataDefineReflection() {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
-          "ChBEYXRhRGVmaW5lLnByb3RvIi0KClZlY3RvckRhdGESCQoBeBgBIAEoAhIJ",
-          "CgF5GAIgASgCEgkKAXoYAyABKAJiBnByb3RvMw=="));
+          "ChBEYXRhRGVmaW5lLnByb3RvIi8KCUxvZ2luRGF0YRIQCghVc2VyTmFtZRgB",
+          "IAEoCRIQCghQYXNzV29yZBgCIAEoCSIyCgxSZWdpc3RlckRhdGESEAoIVXNl",
+          "ck5hbWUYASABKAkSEAoIUGFzc1dvcmQYAiABKAkiLQoKVmVjdG9yRGF0YRIJ",
+          "CgF4GAEgASgCEgkKAXkYAiABKAISCQoBehgDIAEoAiIgCgxVc2VyTmFtZUxp",
+          "c3QSEAoITmFtZUxpc3QYASADKAliBnByb3RvMw=="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-          new pbr::GeneratedClrTypeInfo(typeof(global::VectorData), global::VectorData.Parser, new[]{ "X", "Y", "Z" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(typeof(global::LoginData), global::LoginData.Parser, new[]{ "UserName", "PassWord" }, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::RegisterData), global::RegisterData.Parser, new[]{ "UserName", "PassWord" }, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::VectorData), global::VectorData.Parser, new[]{ "X", "Y", "Z" }, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::UserNameList), global::UserNameList.Parser, new[]{ "NameList" }, null, null, null)
         }));
   }
   #endregion
 
 }
 #region Messages
+public sealed partial class LoginData : pb::IMessage<LoginData> {
+  private static readonly pb::MessageParser<LoginData> _parser = new pb::MessageParser<LoginData>(() => new LoginData());
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public static pb::MessageParser<LoginData> Parser { get { return _parser; } }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public static pbr::MessageDescriptor Descriptor {
+    get { return global::DataDefineReflection.Descriptor.MessageTypes[0]; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  pbr::MessageDescriptor pb::IMessage.Descriptor {
+    get { return Descriptor; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public LoginData() {
+    OnConstruction();
+  }
+
+  partial void OnConstruction();
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public LoginData(LoginData other) : this() {
+    userName_ = other.userName_;
+    passWord_ = other.passWord_;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public LoginData Clone() {
+    return new LoginData(this);
+  }
+
+  /// <summary>Field number for the "UserName" field.</summary>
+  public const int UserNameFieldNumber = 1;
+  private string userName_ = "";
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public string UserName {
+    get { return userName_; }
+    set {
+      userName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+    }
+  }
+
+  /// <summary>Field number for the "PassWord" field.</summary>
+  public const int PassWordFieldNumber = 2;
+  private string passWord_ = "";
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public string PassWord {
+    get { return passWord_; }
+    set {
+      passWord_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+    }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override bool Equals(object other) {
+    return Equals(other as LoginData);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool Equals(LoginData other) {
+    if (ReferenceEquals(other, null)) {
+      return false;
+    }
+    if (ReferenceEquals(other, this)) {
+      return true;
+    }
+    if (UserName != other.UserName) return false;
+    if (PassWord != other.PassWord) return false;
+    return true;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override int GetHashCode() {
+    int hash = 1;
+    if (UserName.Length != 0) hash ^= UserName.GetHashCode();
+    if (PassWord.Length != 0) hash ^= PassWord.GetHashCode();
+    return hash;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override string ToString() {
+    return pb::JsonFormatter.ToDiagnosticString(this);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void WriteTo(pb::CodedOutputStream output) {
+    if (UserName.Length != 0) {
+      output.WriteRawTag(10);
+      output.WriteString(UserName);
+    }
+    if (PassWord.Length != 0) {
+      output.WriteRawTag(18);
+      output.WriteString(PassWord);
+    }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public int CalculateSize() {
+    int size = 0;
+    if (UserName.Length != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(UserName);
+    }
+    if (PassWord.Length != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(PassWord);
+    }
+    return size;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void MergeFrom(LoginData other) {
+    if (other == null) {
+      return;
+    }
+    if (other.UserName.Length != 0) {
+      UserName = other.UserName;
+    }
+    if (other.PassWord.Length != 0) {
+      PassWord = other.PassWord;
+    }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void MergeFrom(pb::CodedInputStream input) {
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+      switch(tag) {
+        default:
+          input.SkipLastField();
+          break;
+        case 10: {
+          UserName = input.ReadString();
+          break;
+        }
+        case 18: {
+          PassWord = input.ReadString();
+          break;
+        }
+      }
+    }
+  }
+
+}
+
+public sealed partial class RegisterData : pb::IMessage<RegisterData> {
+  private static readonly pb::MessageParser<RegisterData> _parser = new pb::MessageParser<RegisterData>(() => new RegisterData());
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public static pb::MessageParser<RegisterData> Parser { get { return _parser; } }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public static pbr::MessageDescriptor Descriptor {
+    get { return global::DataDefineReflection.Descriptor.MessageTypes[1]; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  pbr::MessageDescriptor pb::IMessage.Descriptor {
+    get { return Descriptor; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public RegisterData() {
+    OnConstruction();
+  }
+
+  partial void OnConstruction();
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public RegisterData(RegisterData other) : this() {
+    userName_ = other.userName_;
+    passWord_ = other.passWord_;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public RegisterData Clone() {
+    return new RegisterData(this);
+  }
+
+  /// <summary>Field number for the "UserName" field.</summary>
+  public const int UserNameFieldNumber = 1;
+  private string userName_ = "";
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public string UserName {
+    get { return userName_; }
+    set {
+      userName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+    }
+  }
+
+  /// <summary>Field number for the "PassWord" field.</summary>
+  public const int PassWordFieldNumber = 2;
+  private string passWord_ = "";
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public string PassWord {
+    get { return passWord_; }
+    set {
+      passWord_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+    }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override bool Equals(object other) {
+    return Equals(other as RegisterData);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool Equals(RegisterData other) {
+    if (ReferenceEquals(other, null)) {
+      return false;
+    }
+    if (ReferenceEquals(other, this)) {
+      return true;
+    }
+    if (UserName != other.UserName) return false;
+    if (PassWord != other.PassWord) return false;
+    return true;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override int GetHashCode() {
+    int hash = 1;
+    if (UserName.Length != 0) hash ^= UserName.GetHashCode();
+    if (PassWord.Length != 0) hash ^= PassWord.GetHashCode();
+    return hash;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override string ToString() {
+    return pb::JsonFormatter.ToDiagnosticString(this);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void WriteTo(pb::CodedOutputStream output) {
+    if (UserName.Length != 0) {
+      output.WriteRawTag(10);
+      output.WriteString(UserName);
+    }
+    if (PassWord.Length != 0) {
+      output.WriteRawTag(18);
+      output.WriteString(PassWord);
+    }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public int CalculateSize() {
+    int size = 0;
+    if (UserName.Length != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(UserName);
+    }
+    if (PassWord.Length != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(PassWord);
+    }
+    return size;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void MergeFrom(RegisterData other) {
+    if (other == null) {
+      return;
+    }
+    if (other.UserName.Length != 0) {
+      UserName = other.UserName;
+    }
+    if (other.PassWord.Length != 0) {
+      PassWord = other.PassWord;
+    }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void MergeFrom(pb::CodedInputStream input) {
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+      switch(tag) {
+        default:
+          input.SkipLastField();
+          break;
+        case 10: {
+          UserName = input.ReadString();
+          break;
+        }
+        case 18: {
+          PassWord = input.ReadString();
+          break;
+        }
+      }
+    }
+  }
+
+}
+
 public sealed partial class VectorData : pb::IMessage<VectorData> {
   private static readonly pb::MessageParser<VectorData> _parser = new pb::MessageParser<VectorData>(() => new VectorData());
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -39,7 +335,7 @@ public sealed partial class VectorData : pb::IMessage<VectorData> {
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::DataDefineReflection.Descriptor.MessageTypes[0]; }
+    get { return global::DataDefineReflection.Descriptor.MessageTypes[2]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -197,6 +493,115 @@ public sealed partial class VectorData : pb::IMessage<VectorData> {
         }
         case 29: {
           Z = input.ReadFloat();
+          break;
+        }
+      }
+    }
+  }
+
+}
+
+public sealed partial class UserNameList : pb::IMessage<UserNameList> {
+  private static readonly pb::MessageParser<UserNameList> _parser = new pb::MessageParser<UserNameList>(() => new UserNameList());
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public static pb::MessageParser<UserNameList> Parser { get { return _parser; } }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public static pbr::MessageDescriptor Descriptor {
+    get { return global::DataDefineReflection.Descriptor.MessageTypes[3]; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  pbr::MessageDescriptor pb::IMessage.Descriptor {
+    get { return Descriptor; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public UserNameList() {
+    OnConstruction();
+  }
+
+  partial void OnConstruction();
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public UserNameList(UserNameList other) : this() {
+    nameList_ = other.nameList_.Clone();
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public UserNameList Clone() {
+    return new UserNameList(this);
+  }
+
+  /// <summary>Field number for the "NameList" field.</summary>
+  public const int NameListFieldNumber = 1;
+  private static readonly pb::FieldCodec<string> _repeated_nameList_codec
+      = pb::FieldCodec.ForString(10);
+  private readonly pbc::RepeatedField<string> nameList_ = new pbc::RepeatedField<string>();
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public pbc::RepeatedField<string> NameList {
+    get { return nameList_; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override bool Equals(object other) {
+    return Equals(other as UserNameList);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool Equals(UserNameList other) {
+    if (ReferenceEquals(other, null)) {
+      return false;
+    }
+    if (ReferenceEquals(other, this)) {
+      return true;
+    }
+    if(!nameList_.Equals(other.nameList_)) return false;
+    return true;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override int GetHashCode() {
+    int hash = 1;
+    hash ^= nameList_.GetHashCode();
+    return hash;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override string ToString() {
+    return pb::JsonFormatter.ToDiagnosticString(this);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void WriteTo(pb::CodedOutputStream output) {
+    nameList_.WriteTo(output, _repeated_nameList_codec);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public int CalculateSize() {
+    int size = 0;
+    size += nameList_.CalculateSize(_repeated_nameList_codec);
+    return size;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void MergeFrom(UserNameList other) {
+    if (other == null) {
+      return;
+    }
+    nameList_.Add(other.nameList_);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void MergeFrom(pb::CodedInputStream input) {
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+      switch(tag) {
+        default:
+          input.SkipLastField();
+          break;
+        case 10: {
+          nameList_.AddEntriesFrom(input, _repeated_nameList_codec);
           break;
         }
       }

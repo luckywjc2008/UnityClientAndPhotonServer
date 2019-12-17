@@ -25,7 +25,7 @@ namespace MyGameServer
         //客户端断开连接
         protected override void OnDisconnect(DisconnectReason reasonCode, string reasonDetail)
         {
-            
+            MyGameServer.Instance.peerList.Remove(this);
         }
 
         //处理客户端请求
@@ -44,33 +44,7 @@ namespace MyGameServer
                     OperationCode.Default);
                 handler.OnOperationRequest(operationRequest,sendParameters,this);
             }
-
-
-            //switch (operationRequest.OperationCode)
-            //{
-            //    case 1:
-            //        MyGameServer.LogInfo("client send 1");
-
-            //        Dictionary<byte, object> dicData = operationRequest.Parameters;
-            //        object intValue;
-            //        object stringValue;
-            //        dicData.TryGetValue(1, out intValue);
-            //        dicData.TryGetValue(2, out stringValue);
-
-            //        MyGameServer.LogInfo("parameter 1 = " + intValue.ToString() +" 2 = "+stringValue.ToString());
-
-            //        OperationResponse opResponse = new OperationResponse(1);
-
-            //        Dictionary<byte, object> dicData2 = new Dictionary<byte, object>();
-            //        dicData2.Add(1, 100);
-            //        dicData2.Add(2, "还不错");
-            //        opResponse.SetParameters(dicData2);
-            //        SendOperationRes(opResponse, sendParameters);
-            //        SendEventToClient();
-            //        break;
-            //    default:
-            //        break;
-            //}
+           
         }
 
         private void SendOperationRes(OperationResponse opResponse, SendParameters parameter)

@@ -20,9 +20,8 @@ namespace MyGameServer.Handler
         }
 
         public override void OnOperationRequest(OperationRequest operationRequest, SendParameters sendParameters, ClientPeer peer)
-        {
-            byte[] byteAtrr = (byte[])DictTool.GetValue<byte, object>(operationRequest.Parameters, (byte) ParameterCode.Position);
-            VectorData pos = VectorData.Parser.ParseFrom(byteAtrr);
+        {  
+            VectorData pos = DictTool.GetProtoByDtoData<VectorData>(operationRequest.Parameters,ParameterCode.Position);
 
             MyGameServer.LogInfo("x = "+ pos.X + "y= " + pos.Y + "z = " + pos.Z);
 

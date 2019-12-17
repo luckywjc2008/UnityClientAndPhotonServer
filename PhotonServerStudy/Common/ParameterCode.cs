@@ -4,11 +4,10 @@ namespace Common
 {
     public enum ParameterCode:byte
     {
-        UserName,
-        PassWord,
+        RegisterData,
+        LoginData,
         Position,
-        X,
-        Y,
-        Z,
+        UserNameList,
+        UserName,
     }
 }

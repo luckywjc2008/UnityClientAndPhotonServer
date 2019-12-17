@@ -5,3 +5,10 @@ G:\PhotonServer\ServerStudy\PhotonServerStudy\MyGameServer\obj\Debug\MyGameServe
 G:\Photon\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\MyGameServer\bin\log4net.config
 G:\PhotonServer\ServerStudy\PhotonServerStudy\MyGameServer\obj\Debug\MyGameServer.csprojResolveAssemblyReference.cache
 G:\Photon\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\MyGameServer\bin\hibernate.cfg.xml
+F:\Photon\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\MyGameServer\bin\hibernate.cfg.xml
+F:\Photon\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\MyGameServer\bin\log4net.config
+F:\Photon\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\MyGameServer\bin\MyGameServer.dll
+F:\Photon\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\MyGameServer\bin\MyGameServer.pdb
+F:\PhotonServer\ServerStudy\PhotonServerStudy\MyGameServer\obj\Debug\MyGameServer.csprojResolveAssemblyReference.cache
+F:\PhotonServer\ServerStudy\PhotonServerStudy\MyGameServer\obj\Debug\MyGameServer.dll
+F:\PhotonServer\ServerStudy\PhotonServerStudy\MyGameServer\obj\Debug\MyGameServer.pdb

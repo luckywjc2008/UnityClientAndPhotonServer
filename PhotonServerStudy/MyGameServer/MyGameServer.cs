@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
+using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 using Common;
+using Common.Tools;
 using Photon.SocketServer;
 using ExitGames.Logging;
 using ExitGames.Logging.Log4Net;
 using log4net.Config;
 using MyGameServer.Handler;
-using MyGameServer.Manager;
-using MyGameServer.Model;
 
 namespace MyGameServer
 {
@@ -27,11 +25,15 @@ namespace MyGameServer
 
         public Dictionary<OperationCode,BaseRequestHandler> DictRequestHandler = new Dictionary<OperationCode, BaseRequestHandler>();
 
+        public List<ClientPeer> peerList = new List<ClientPeer>();
+
         //当一个客户端请求连接时
         protected override PeerBase CreatePeer(InitRequest initRequest)
         {
-            log.Info("Client Connect!");
-            return new ClientPeer(initRequest);
+            log.Info("Client Connect ConnectionId = " + initRequest.ConnectionId + " Ip:Port = " + initRequest.RemoteIP + ":" + initRequest.RemotePort);
+            ClientPeer peer = new ClientPeer(initRequest);
+            peerList.Add(peer);
+            return peer;
         }
         //初始化
         protected override void Setup()
@@ -47,9 +49,9 @@ namespace MyGameServer
                 XmlConfigurator.ConfigureAndWatch(configFileInfo);
             }
 
-            log.Info("Setup completed!");
-
             InitHandler();
+
+            log.Info("Setup completed!");
         }
         //服务端关闭
         protected override void TearDown()
@@ -64,17 +66,45 @@ namespace MyGameServer
 
         private void InitHandler()
         {
-            LoginHandler loginhandler = new LoginHandler();
-            DictRequestHandler.Add(loginhandler.OpCode,loginhandler);
+            MyGameServer.LogInfo(" InitHandler Start");
 
-            DefaultHandler defaultHandler = new DefaultHandler();
-            DictRequestHandler.Add(defaultHandler.OpCode,defaultHandler);
+            Type[] types = Assembly.GetCallingAssembly().GetTypes();
+            Type baseRequestType = typeof(BaseRequestHandler);
 
-            RegisterHandler registerHandler = new RegisterHandler();
-            DictRequestHandler.Add(registerHandler.OpCode, registerHandler);
+            MyGameServer.LogInfo(" baseRequestType FullName = " + baseRequestType.FullName);
 
-            SyncPositionHandler syncPositionHandler = new SyncPositionHandler();
-            DictRequestHandler.Add(syncPositionHandler.OpCode, syncPositionHandler);
+            foreach (var typeItem in types)
+            {
+                Type baseType = typeItem.BaseType;
+                if (baseType != null)
+                {
+                    if (baseType.Name == baseRequestType.Name)
+                    {
+                        try
+                        {
+                            Type ObjType = Type.GetType(typeItem.FullName, true);
+                            object obj = Activator.CreateInstance(ObjType);
+                            if (obj != null)
+                            {
+                                BaseRequestHandler info = obj as BaseRequestHandler;
+                                if (info != null)
+                                {
+                                    MyGameServer.LogInfo("ObjType FullName = " + ObjType.FullName + "Add To DictRequestHandler");
+                                    DictRequestHandler.Add(info.OpCode, info);
+                                }
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            MyGameServer.LogInfo("typeItem FullName = " + typeItem.FullName + "Not Find");
+                        }
+                    }
+                }
+
+            }
+
+            MyGameServer.LogInfo(" InitHandler Complete");
+
         }
     }
 }

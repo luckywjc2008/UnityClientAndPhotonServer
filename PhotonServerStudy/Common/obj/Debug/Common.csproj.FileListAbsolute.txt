@@ -4,4 +4,8 @@ G:\PhotonServer\ServerStudy\PhotonServerStudy\Common\obj\Debug\Common.dll
 G:\PhotonServer\ServerStudy\PhotonServerStudy\Common\obj\Debug\Common.pdb
 G:\PhotonServer\ServerStudy\ClientStudy\PhotonServerUnityClient\Assets\Plugins\Common.dll
 G:\PhotonServer\ServerStudy\ClientStudy\PhotonServerUnityClient\Assets\Plugins\Common.pdb
+F:\PhotonServer\ServerStudy\ClientStudy\PhotonServerUnityClient\Assets\Plugins\Common.dll
+F:\PhotonServer\ServerStudy\ClientStudy\PhotonServerUnityClient\Assets\Plugins\Common.pdb
+F:\PhotonServer\ServerStudy\PhotonServerStudy\Common\obj\Debug\Common.dll
+F:\PhotonServer\ServerStudy\PhotonServerStudy\Common\obj\Debug\Common.pdb
 G:\PhotonServer\ServerStudy\PhotonServerStudy\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache

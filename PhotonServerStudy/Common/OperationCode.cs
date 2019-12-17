@@ -8,5 +8,6 @@ namespace Common
         Register,
         Default,
         SyncPosition,
+        SyncPlayer,
     }
 }
