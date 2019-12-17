@@ -2,7 +2,7 @@
 <UnityGameFramework>
   <AssetBundleBuilder>
     <Settings>
-      <InternalResourceVersion>1</InternalResourceVersion>
+      <InternalResourceVersion>3</InternalResourceVersion>
       <WindowsSelected>True</WindowsSelected>
       <MacOSXSelected>False</MacOSXSelected>
       <IOSSelected>False</IOSSelected>
@@ -18,7 +18,7 @@
       <AppendHashToAssetBundleNameSelected>False</AppendHashToAssetBundleNameSelected>
       <ChunkBasedCompressionSelected>True</ChunkBasedCompressionSelected>
       <BuildEventHandlerTypeName>StarForce.Editor.StarForceBuildEventHandler</BuildEventHandlerTypeName>
-      <OutputDirectory>E:/UnityGameFramework/ARPGGame/AssetBundleWorkingDirRoot</OutputDirectory>
+      <OutputDirectory>G:/PhotonServer/AssetBundleWorkingDirRoot</OutputDirectory>
     </Settings>
   </AssetBundleBuilder>
 </UnityGameFramework>

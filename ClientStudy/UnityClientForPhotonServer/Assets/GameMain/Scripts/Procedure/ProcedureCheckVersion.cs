@@ -28,7 +28,8 @@ namespace StarForce
             GameEntry.Event.Subscribe(WebRequestFailureEventArgs.EventId, OnWebRequestFailure);
             GameEntry.Event.Subscribe(ResourceInitCompleteEventArgs.EventId, OnResourceInitComplete);
 
-            RequestVersion();
+            //RequestVersion();
+            GameEntry.Resource.InitResources();
         }
 
         protected internal override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)

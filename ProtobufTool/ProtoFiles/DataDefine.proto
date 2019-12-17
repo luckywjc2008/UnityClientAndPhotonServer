@@ -19,3 +19,7 @@ message VectorData {
 message UserNameList {
 	repeated string NameList = 1;
 }
+
+message NewPlayer {
+	string UserName = 1;
+}

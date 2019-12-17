@@ -66,13 +66,19 @@ public class Player : MonoBehaviour
         Debug.Log("Start Instantiate Other Player");
         foreach (var username in userNameList.NameList)
         {
-            GameObject otherPlayer =  GameObject.Instantiate(PlayerPrefab);
-            Destroy(otherPlayer.GetComponent<SyncPlayerRequest>());
-            Destroy(otherPlayer.GetComponent<SyncPositionRequest>());
-            otherPlayer.GetComponent<Player>().isLocalPlayer = false;
-            otherPlayer.GetComponent<Player>().userName = username;
-
-            otherPlayerDict.Add(username,otherPlayer);
+            OnNewPlayerEvent(username);
         }
+    }
+
+    public void OnNewPlayerEvent(string userName)
+    {
+        GameObject otherPlayer = GameObject.Instantiate(PlayerPrefab);
+        Destroy(otherPlayer.GetComponent<SyncPlayerRequest>());
+        Destroy(otherPlayer.GetComponent<SyncPositionRequest>());
+        Destroy(otherPlayer.GetComponent<NewPlayerEvent>());
+        otherPlayer.GetComponent<Player>().isLocalPlayer = false;
+        otherPlayer.GetComponent<Player>().userName = userName;
+
+        otherPlayerDict.Add(userName, otherPlayer);
     }
 }

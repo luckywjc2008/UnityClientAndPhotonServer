@@ -47,22 +47,20 @@ namespace MyGameServer.Handler
             peer.SendOperationResponse(response,sendParameters);
 
 
-            List<string> userNameList2 = new List<string>();
-            foreach (var temPeer in MyGameServer.Instance.peerList)
+            NewPlayer newPlayer = new NewPlayer();
+            newPlayer.UserName = peer.userName;
+
+            EventData eventData = new EventData((byte)EventCode.NewPlayer);
+            Dictionary<byte, object> data2 = DictTool.GetDtoDataByProto(newPlayer, ParameterCode.UserName);
+            eventData.Parameters = data2;
+
+            foreach (var tempPeer in MyGameServer.Instance.peerList)
             {
-                if (!string.IsNullOrEmpty(temPeer.userName) && temPeer != peer)
+                if (!string.IsNullOrEmpty(tempPeer.userName) && tempPeer != peer)
                 {
-                    userNameList2.Add(temPeer.userName);
+                    tempPeer.SendEvent(eventData, sendParameters);
                 }
             }
-
-            UserNameList userNameListString2 = new UserNameList();
-            userNameListString2.NameList.AddRange(userNameList2);
-
-            Dictionary<byte, object> data2 = DictTool.GetDtoDataByProto(userNameListString2, ParameterCode.UserNameList);
-            EventData eventData = new EventData((byte)EventCode.NewPlayer);
-            eventData.Parameters = data2;
-            peer.SendEvent(eventData, sendParameters);
         }
     }
 }

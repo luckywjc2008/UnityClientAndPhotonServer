@@ -52,6 +52,7 @@
       <Asset Guid="352da872791696c48af3b21132e3e3c3" AssetBundleName="DataTables" />
       <Asset Guid="372a8b1e52bedc64b9207b12d167afaa" AssetBundleName="DataTables" />
       <Asset Guid="3aa539b1e46111d4299a83c73ebe762c" AssetBundleName="UI/UIForms" />
+      <Asset Guid="3bd9289412ac47c409e698f9ce5afb33" AssetBundleName="Scenes" />
       <Asset Guid="3be3fac3611f4584695662c4889f722d" AssetBundleName="UI/UISprites/Common" />
       <Asset Guid="3dc7455402dfa462b89a4bbd513955e9" AssetBundleName="Sounds" />
       <Asset Guid="3e504a46a8fcec34db3c4776530c6eb2" AssetBundleName="Textures" />
@@ -121,6 +122,7 @@
       <Asset Guid="cadd0764941c8b646ae79b51d0ea8285" AssetBundleName="UI/UISprites/Common" />
       <Asset Guid="cfe53cf384344bd47a8680f8c5f97a7b" AssetBundleName="DataTables" />
       <Asset Guid="d9808401c68af274a8edfbed3d1b53c7" AssetBundleName="Meshes" />
+      <Asset Guid="dab80d8bf714a2e45bb23a1375f9dedf" AssetBundleName="Scenes" />
       <Asset Guid="db58965402f12ed47b4dad61a9e48c9d" AssetBundleName="UI/UISprites/Icons" />
       <Asset Guid="e5ca26c53b6ab8a46b52817008d7c7fa" AssetBundleName="UI/UISprites/Icons" />
       <Asset Guid="e82837c9099f69a48b48fc44eb8d119d" AssetBundleName="UI/UISprites/Common" />

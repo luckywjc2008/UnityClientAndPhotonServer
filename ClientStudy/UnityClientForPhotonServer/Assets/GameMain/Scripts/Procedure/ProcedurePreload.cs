@@ -64,7 +64,7 @@ namespace StarForce
             procedureOwner.SetData<VarInt>(Constant.ProcedureData.NextSceneId, GameEntry.Config.GetInt("Scene.Menu"));
             //WJC
             //ChangeState<ProcedureChangeScene>(procedureOwner);
-            ChangeState<ProcedureLoadLuaScripts>(procedureOwner);
+            //ChangeState<ProcedureLoadLuaScripts>(procedureOwner);
             ChangeState<ProcedureEnterTestGame>(procedureOwner);
             //!WJC
         }
