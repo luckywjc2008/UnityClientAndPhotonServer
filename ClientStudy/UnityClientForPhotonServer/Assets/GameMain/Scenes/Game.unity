@@ -147,16 +147,26 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4533166302434340, guid: df9518f37c982594abf6733d5d1d4024, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114645164051404950, guid: df9518f37c982594abf6733d5d1d4024,
         type: 2}
       propertyPath: isLocalPlayer
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114645164051404950, guid: df9518f37c982594abf6733d5d1d4024, type: 2}
+    - {fileID: 114517708260561056, guid: df9518f37c982594abf6733d5d1d4024, type: 2}
+    - {fileID: 114618891155602516, guid: df9518f37c982594abf6733d5d1d4024, type: 2}
+    - {fileID: 114644304798160070, guid: df9518f37c982594abf6733d5d1d4024, type: 2}
+    - {fileID: 114844920911357428, guid: df9518f37c982594abf6733d5d1d4024, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: df9518f37c982594abf6733d5d1d4024, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &413168093 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1491387761715224, guid: df9518f37c982594abf6733d5d1d4024,
+    type: 2}
+  m_PrefabInternal: {fileID: 413168092}
 --- !u!1 &1048285917
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,3 +405,101 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1886439358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1886439359}
+  - component: {fileID: 1886439364}
+  - component: {fileID: 1886439363}
+  - component: {fileID: 1886439362}
+  - component: {fileID: 1886439361}
+  - component: {fileID: 1886439360}
+  m_Layer: 0
+  m_Name: PlayerController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1886439359
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1886439358}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1886439360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1886439358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71208dc2c6739114dbf805299ee75a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLocalPlayer: 1
+  userName: 
+  PlayerPrefab: {fileID: 1491387761715224, guid: df9518f37c982594abf6733d5d1d4024,
+    type: 2}
+  player: {fileID: 413168093}
+--- !u!114 &1886439361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1886439358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf59a6fb27759046a192f5ad8a858c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OpCode: 3
+  pos: {x: 0, y: 0, z: 0}
+--- !u!114 &1886439362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1886439358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2071889f50aa0b43a44029c17feb3f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OpCode: 4
+--- !u!114 &1886439363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1886439358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a237e6b79f4c3aa4c9d4add353de18e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventCode: 0
+--- !u!114 &1886439364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1886439358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c738d33a794822344adc019da7a64d36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventCode: 1

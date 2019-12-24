@@ -23,8 +23,7 @@ namespace MyGameServer.Handler
         {  
             VectorData pos = DictTool.GetProtoByDtoData<VectorData>(operationRequest.Parameters,ParameterCode.Position);
 
-            MyGameServer.LogInfo("x = "+ pos.X + "y= " + pos.Y + "z = " + pos.Z);
-
+            //MyGameServer.LogInfo("x = "+ pos.X + "y= " + pos.Y + "z = " + pos.Z);
             peer.posData = pos;
         }
     }

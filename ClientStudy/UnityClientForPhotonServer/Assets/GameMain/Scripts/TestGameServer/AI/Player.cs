@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Common.Tools;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
-    public bool isLocalPlayer = true;
     public string userName;
 
     public GameObject PlayerPrefab;
+
+    public GameObject player;
 
     private SyncPositionRequest syncPositionRequest;
     private SyncPlayerRequest syncPlayerRequest;
@@ -21,43 +22,36 @@ public class Player : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-        if (isLocalPlayer)
-	    {
-            Renderer renderer = GetComponent<Renderer>();
-            renderer.material.color = Color.green;
 
-            syncPositionRequest = GetComponent<SyncPositionRequest>();
-	        syncPlayerRequest = FindObjectOfType<SyncPlayerRequest>();
-            syncPlayerRequest.DefaultRequest();
+        Renderer renderer = player.GetComponent<Renderer>();
+        renderer.material.color = Color.green;
 
-            InvokeRepeating("SyncPosition", 3,0.1f);
-	    }
-	    else
-	    {
-            Renderer renderer = GetComponent<Renderer>();
-            renderer.material.color = Color.white;
-        }
-	}
+        syncPositionRequest = GetComponent<SyncPositionRequest>();
+        syncPlayerRequest = FindObjectOfType<SyncPlayerRequest>();
+        syncPlayerRequest.DefaultRequest();
+
+        InvokeRepeating("SyncPosition", 3, 0.1f);
+
+    }
 
     void SyncPosition()
     {
-        if ( Vector3.Distance(transform.position,lastPostion) >= moveOffset )
+        if ( Vector3.Distance(player.transform.position,lastPostion) >= moveOffset )
         {
-            lastPostion = transform.position;
-            syncPositionRequest.pos = transform.position;
+            lastPostion = player.transform.position;
+            syncPositionRequest.pos = player.transform.position;
             syncPositionRequest.DefaultRequest();
         }
     }
 
     // Update is called once per frame
 	void Update () {
-	    if (isLocalPlayer)
+	    if (player != null)
 	    {
 	        float h = Input.GetAxis("Horizontal");
 	        float v = Input.GetAxis("Vertical");
 
-            transform.Translate(new Vector3(-h,0,-v)*Time.deltaTime*4);
-
+            player.transform.Translate(new Vector3(-h,0,-v)*Time.deltaTime*4);
 	    }
 	}
 
@@ -73,12 +67,25 @@ public class Player : MonoBehaviour
     public void OnNewPlayerEvent(string userName)
     {
         GameObject otherPlayer = GameObject.Instantiate(PlayerPrefab);
-        Destroy(otherPlayer.GetComponent<SyncPlayerRequest>());
-        Destroy(otherPlayer.GetComponent<SyncPositionRequest>());
-        Destroy(otherPlayer.GetComponent<NewPlayerEvent>());
-        otherPlayer.GetComponent<Player>().isLocalPlayer = false;
-        otherPlayer.GetComponent<Player>().userName = userName;
-
         otherPlayerDict.Add(userName, otherPlayer);
+    }
+
+    public void OnSyncPositionEvent(PlayerList playerList)
+    {
+        foreach (PlayerData playerData in playerList.PlayerList_)
+        {
+            //Debug.Log("playerData.UsrName = " + playerData.UsrName + "Pos = " + playerData.Pos.ToString());
+            GameObject go = DictTool.GetValue<string, GameObject>(otherPlayerDict, playerData.UsrName);
+
+            if (go != null)
+            {
+                go.transform.position = new Vector3()
+                {
+                    x = playerData.Pos.X,
+                    y = playerData.Pos.Y,
+                    z = playerData.Pos.Z,
+                };
+            }
+        }
     }
 }

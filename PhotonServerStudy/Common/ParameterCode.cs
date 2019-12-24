@@ -9,5 +9,6 @@ namespace Common
         Position,
         UserNameList,
         UserName,
+        PlayerDataList,
     }
 }

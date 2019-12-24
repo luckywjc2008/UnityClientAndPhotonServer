@@ -25,7 +25,9 @@ public static partial class DataDefineReflection {
           "ck5hbWUYASABKAkSEAoIUGFzc1dvcmQYAiABKAkiLQoKVmVjdG9yRGF0YRIJ",
           "CgF4GAEgASgCEgkKAXkYAiABKAISCQoBehgDIAEoAiIgCgxVc2VyTmFtZUxp",
           "c3QSEAoITmFtZUxpc3QYASADKAkiHQoJTmV3UGxheWVyEhAKCFVzZXJOYW1l",
-          "GAEgASgJYgZwcm90bzM="));
+          "GAEgASgJIjcKClBsYXllckRhdGESGAoDUG9zGAEgASgLMgsuVmVjdG9yRGF0",
+          "YRIPCgdVc3JOYW1lGAIgASgJIi0KClBsYXllckxpc3QSHwoKUGxheWVyTGlz",
+          "dBgBIAMoCzILLlBsYXllckRhdGFiBnByb3RvMw=="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -33,7 +35,9 @@ public static partial class DataDefineReflection {
           new pbr::GeneratedClrTypeInfo(typeof(global::RegisterData), global::RegisterData.Parser, new[]{ "UserName", "PassWord" }, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::VectorData), global::VectorData.Parser, new[]{ "X", "Y", "Z" }, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::UserNameList), global::UserNameList.Parser, new[]{ "NameList" }, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::NewPlayer), global::NewPlayer.Parser, new[]{ "UserName" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(typeof(global::NewPlayer), global::NewPlayer.Parser, new[]{ "UserName" }, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::PlayerData), global::PlayerData.Parser, new[]{ "Pos", "UsrName" }, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::PlayerList), global::PlayerList.Parser, new[]{ "PlayerList_" }, null, null, null)
         }));
   }
   #endregion
@@ -721,6 +725,266 @@ public sealed partial class NewPlayer : pb::IMessage<NewPlayer> {
           break;
         case 10: {
           UserName = input.ReadString();
+          break;
+        }
+      }
+    }
+  }
+
+}
+
+public sealed partial class PlayerData : pb::IMessage<PlayerData> {
+  private static readonly pb::MessageParser<PlayerData> _parser = new pb::MessageParser<PlayerData>(() => new PlayerData());
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public static pb::MessageParser<PlayerData> Parser { get { return _parser; } }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public static pbr::MessageDescriptor Descriptor {
+    get { return global::DataDefineReflection.Descriptor.MessageTypes[5]; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  pbr::MessageDescriptor pb::IMessage.Descriptor {
+    get { return Descriptor; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public PlayerData() {
+    OnConstruction();
+  }
+
+  partial void OnConstruction();
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public PlayerData(PlayerData other) : this() {
+    Pos = other.pos_ != null ? other.Pos.Clone() : null;
+    usrName_ = other.usrName_;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public PlayerData Clone() {
+    return new PlayerData(this);
+  }
+
+  /// <summary>Field number for the "Pos" field.</summary>
+  public const int PosFieldNumber = 1;
+  private global::VectorData pos_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public global::VectorData Pos {
+    get { return pos_; }
+    set {
+      pos_ = value;
+    }
+  }
+
+  /// <summary>Field number for the "UsrName" field.</summary>
+  public const int UsrNameFieldNumber = 2;
+  private string usrName_ = "";
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public string UsrName {
+    get { return usrName_; }
+    set {
+      usrName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+    }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override bool Equals(object other) {
+    return Equals(other as PlayerData);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool Equals(PlayerData other) {
+    if (ReferenceEquals(other, null)) {
+      return false;
+    }
+    if (ReferenceEquals(other, this)) {
+      return true;
+    }
+    if (!object.Equals(Pos, other.Pos)) return false;
+    if (UsrName != other.UsrName) return false;
+    return true;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override int GetHashCode() {
+    int hash = 1;
+    if (pos_ != null) hash ^= Pos.GetHashCode();
+    if (UsrName.Length != 0) hash ^= UsrName.GetHashCode();
+    return hash;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override string ToString() {
+    return pb::JsonFormatter.ToDiagnosticString(this);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void WriteTo(pb::CodedOutputStream output) {
+    if (pos_ != null) {
+      output.WriteRawTag(10);
+      output.WriteMessage(Pos);
+    }
+    if (UsrName.Length != 0) {
+      output.WriteRawTag(18);
+      output.WriteString(UsrName);
+    }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public int CalculateSize() {
+    int size = 0;
+    if (pos_ != null) {
+      size += 1 + pb::CodedOutputStream.ComputeMessageSize(Pos);
+    }
+    if (UsrName.Length != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(UsrName);
+    }
+    return size;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void MergeFrom(PlayerData other) {
+    if (other == null) {
+      return;
+    }
+    if (other.pos_ != null) {
+      if (pos_ == null) {
+        pos_ = new global::VectorData();
+      }
+      Pos.MergeFrom(other.Pos);
+    }
+    if (other.UsrName.Length != 0) {
+      UsrName = other.UsrName;
+    }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void MergeFrom(pb::CodedInputStream input) {
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+      switch(tag) {
+        default:
+          input.SkipLastField();
+          break;
+        case 10: {
+          if (pos_ == null) {
+            pos_ = new global::VectorData();
+          }
+          input.ReadMessage(pos_);
+          break;
+        }
+        case 18: {
+          UsrName = input.ReadString();
+          break;
+        }
+      }
+    }
+  }
+
+}
+
+public sealed partial class PlayerList : pb::IMessage<PlayerList> {
+  private static readonly pb::MessageParser<PlayerList> _parser = new pb::MessageParser<PlayerList>(() => new PlayerList());
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public static pb::MessageParser<PlayerList> Parser { get { return _parser; } }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public static pbr::MessageDescriptor Descriptor {
+    get { return global::DataDefineReflection.Descriptor.MessageTypes[6]; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  pbr::MessageDescriptor pb::IMessage.Descriptor {
+    get { return Descriptor; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public PlayerList() {
+    OnConstruction();
+  }
+
+  partial void OnConstruction();
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public PlayerList(PlayerList other) : this() {
+    playerList_ = other.playerList_.Clone();
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public PlayerList Clone() {
+    return new PlayerList(this);
+  }
+
+  /// <summary>Field number for the "PlayerList" field.</summary>
+  public const int PlayerList_FieldNumber = 1;
+  private static readonly pb::FieldCodec<global::PlayerData> _repeated_playerList_codec
+      = pb::FieldCodec.ForMessage(10, global::PlayerData.Parser);
+  private readonly pbc::RepeatedField<global::PlayerData> playerList_ = new pbc::RepeatedField<global::PlayerData>();
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public pbc::RepeatedField<global::PlayerData> PlayerList_ {
+    get { return playerList_; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override bool Equals(object other) {
+    return Equals(other as PlayerList);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public bool Equals(PlayerList other) {
+    if (ReferenceEquals(other, null)) {
+      return false;
+    }
+    if (ReferenceEquals(other, this)) {
+      return true;
+    }
+    if(!playerList_.Equals(other.playerList_)) return false;
+    return true;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override int GetHashCode() {
+    int hash = 1;
+    hash ^= playerList_.GetHashCode();
+    return hash;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public override string ToString() {
+    return pb::JsonFormatter.ToDiagnosticString(this);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void WriteTo(pb::CodedOutputStream output) {
+    playerList_.WriteTo(output, _repeated_playerList_codec);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public int CalculateSize() {
+    int size = 0;
+    size += playerList_.CalculateSize(_repeated_playerList_codec);
+    return size;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void MergeFrom(PlayerList other) {
+    if (other == null) {
+      return;
+    }
+    playerList_.Add(other.playerList_);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  public void MergeFrom(pb::CodedInputStream input) {
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+      switch(tag) {
+        default:
+          input.SkipLastField();
+          break;
+        case 10: {
+          playerList_.AddEntriesFrom(input, _repeated_playerList_codec);
           break;
         }
       }

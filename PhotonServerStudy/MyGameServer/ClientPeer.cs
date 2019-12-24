@@ -14,7 +14,6 @@ namespace MyGameServer
 
     public class ClientPeer : Photon.SocketServer.ClientPeer
     {
-        public float x, y, z;
         public VectorData posData;
         public string userName;
 

@@ -92,6 +92,7 @@
     <Compile Include="MyGameServer.cs" />
     <Compile Include="NHibernateHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Threads\SyncPositionThread.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="log4net.config">

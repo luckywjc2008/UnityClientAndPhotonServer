@@ -2,7 +2,7 @@
 <UnityGameFramework>
   <AssetBundleBuilder>
     <Settings>
-      <InternalResourceVersion>3</InternalResourceVersion>
+      <InternalResourceVersion>5</InternalResourceVersion>
       <WindowsSelected>True</WindowsSelected>
       <MacOSXSelected>False</MacOSXSelected>
       <IOSSelected>False</IOSSelected>

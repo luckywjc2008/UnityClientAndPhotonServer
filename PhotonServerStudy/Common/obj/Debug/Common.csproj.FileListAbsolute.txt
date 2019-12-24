@@ -10,3 +10,4 @@ F:\PhotonServer\ServerStudy\PhotonServerStudy\Common\obj\Debug\Common.dll
 F:\PhotonServer\ServerStudy\PhotonServerStudy\Common\obj\Debug\Common.pdb
 G:\PhotonServer\ServerStudy\ClientStudy\UnityClientForPhotonServer\Assets\Plugins\Common.dll
 G:\PhotonServer\ServerStudy\ClientStudy\UnityClientForPhotonServer\Assets\Plugins\Common.pdb
+G:\PhotonServer\ServerStudy\PhotonServerStudy\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache

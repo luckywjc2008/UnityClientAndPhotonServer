@@ -22,10 +22,6 @@ GameObject:
   - component: {fileID: 33821730901630734}
   - component: {fileID: 136935053480459880}
   - component: {fileID: 23680806989659148}
-  - component: {fileID: 114645164051404950}
-  - component: {fileID: 114517708260561056}
-  - component: {fileID: 114618891155602516}
-  - component: {fileID: 114644304798160070}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -85,57 +81,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1491387761715224}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114517708260561056
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1491387761715224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcf59a6fb27759046a192f5ad8a858c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OpCode: 3
-  pos: {x: 0, y: 0, z: 0}
---- !u!114 &114618891155602516
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1491387761715224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2071889f50aa0b43a44029c17feb3f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OpCode: 4
---- !u!114 &114644304798160070
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1491387761715224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a237e6b79f4c3aa4c9d4add353de18e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventCode: 0
---- !u!114 &114645164051404950
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1491387761715224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71208dc2c6739114dbf805299ee75a61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLocalPlayer: 0
-  userName: 
-  PlayerPrefab: {fileID: 1491387761715224}
 --- !u!136 &136935053480459880
 CapsuleCollider:
   m_ObjectHideFlags: 1

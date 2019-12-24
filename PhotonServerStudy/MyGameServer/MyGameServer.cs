@@ -10,6 +10,7 @@ using ExitGames.Logging;
 using ExitGames.Logging.Log4Net;
 using log4net.Config;
 using MyGameServer.Handler;
+using MyGameServer.Threads;
 
 namespace MyGameServer
 {
@@ -26,6 +27,8 @@ namespace MyGameServer
         public Dictionary<OperationCode,BaseRequestHandler> DictRequestHandler = new Dictionary<OperationCode, BaseRequestHandler>();
 
         public List<ClientPeer> peerList = new List<ClientPeer>();
+
+        private SyncPositionThread syncPositionThread = new SyncPositionThread();
 
         //当一个客户端请求连接时
         protected override PeerBase CreatePeer(InitRequest initRequest)
@@ -50,12 +53,14 @@ namespace MyGameServer
             }
 
             InitHandler();
+            syncPositionThread.Run();
 
             log.Info("Setup completed!");
         }
         //服务端关闭
         protected override void TearDown()
         {
+            syncPositionThread.Stop();
             log.Info("Server close!");
         }
 

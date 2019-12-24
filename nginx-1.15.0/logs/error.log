@@ -1,0 +1,55 @@
+2018/06/07 15:04:14 [error] 36040#36084: *1 directory index of "E:\UnityUpDown\global/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2018/06/07 15:04:14 [error] 36040#36084: *1 CreateFile() "E:\UnityUpDown\global/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2018/06/07 15:06:49 [error] 36040#36084: *4 CreateFile() "E:\UnityUpDown\global/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/GameApp_Mahjong/windows/version.txt"
+2018/06/07 15:39:47 [error] 34352#31560: *9 CreateFile() "E:\UnityUpDown\global/favicon.ico" failed (2: The system cannot find the file specified), client: 192.168.80.47, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "192.168.80.47", referrer: "http://192.168.80.47/GameApp_Mahjong/windows/version.txt"
+2018/06/07 16:19:45 [error] 37472#13008: *1 CreateFile() "E:\nginx-1.15.0/html/GameApp_Mahjong/windows/version.txt" failed (3: The system cannot find the path specified), client: 127.0.0.1, server: localhost, request: "GET /GameApp_Mahjong/windows/version.txt HTTP/1.1", host: "127.0.0.1"
+2018/06/07 17:20:44 [error] 39928#32080: *1 invalid URL prefix in "/GameApp_Mahjong/windows/version.txt", client: 127.0.0.1, server: localhost, request: "POST /GameApp_Mahjong/windows/version.txt HTTP/1.1", host: "127.0.0.1"
+2018/07/13 09:41:48 [error] 26600#20024: *1 CreateFile() "E:\UnityUpDown\global/GameApp_Mahjong/windows/version.tst" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /GameApp_Mahjong/windows/version.tst HTTP/1.1", host: "127.0.0.1"
+2018/07/13 09:41:49 [error] 26600#20024: *1 CreateFile() "E:\UnityUpDown\global/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/GameApp_Mahjong/windows/version.tst"
+2019/11/13 15:03:27 [emerg] 78420#73044: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2019/11/13 15:16:57 [notice] 82644#82844: signal process started
+2019/11/13 15:16:57 [error] 82644#82844: OpenEvent("Global\ngx_quit_13052") failed (2: The system cannot find the file specified)
+2019/12/17 19:43:16 [emerg] 9588#22004: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2019/12/17 19:43:36 [emerg] 9560#16300: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2019/12/17 19:54:43 [emerg] 11784#20980: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2019/12/17 19:55:00 [emerg] 23992#26328: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2019/12/17 19:55:24 [notice] 18220#9564: signal process started
+2019/12/17 19:55:24 [error] 18220#9564: OpenEvent("Global\ngx_reload_13052") failed (2: The system cannot find the file specified)
+2019/12/17 19:55:56 [emerg] 25044#19384: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2019/12/17 19:57:14 [notice] 21364#11492: signal process started
+2019/12/17 19:57:14 [error] 21364#11492: OpenEvent("Global\ngx_reload_13052") failed (2: The system cannot find the file specified)
+2019/12/17 19:57:19 [emerg] 20252#22140: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2019/12/17 19:57:41 [notice] 17884#23376: signal process started
+2019/12/17 19:57:41 [error] 17884#23376: OpenEvent("Global\ngx_stop_13052") failed (2: The system cannot find the file specified)
+2019/12/17 20:04:43 [emerg] 23560#10356: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2019/12/18 10:12:29 [emerg] 21856#15372: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2019/12/18 10:17:38 [error] 18928#26132: *2 directory index of "E:\UnityUpDown\global/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1:8808"
+2019/12/18 10:17:38 [error] 18928#26132: *2 CreateFile() "E:\UnityUpDown\global/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8808", referrer: "http://127.0.0.1:8808/"
+2019/12/18 10:18:21 [error] 18928#26132: *2 directory index of "E:\UnityUpDown\global/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1:8808"
+2019/12/18 10:18:39 [error] 18928#26132: *2 CreateFile() "E:\UnityUpDown\global/index" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /index HTTP/1.1", host: "127.0.0.1:8808"
+2019/12/18 10:19:00 [error] 18928#26132: *2 CreateFile() "E:\UnityUpDown\global/index.html" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /index.html HTTP/1.1", host: "127.0.0.1:8808"
+2019/12/18 10:19:20 [error] 18928#26132: *2 CreateFile() "E:\UnityUpDown\global/index" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /index HTTP/1.1", host: "127.0.0.1:8808"
+2019/12/18 10:19:29 [error] 18928#26132: *2 directory index of "E:\UnityUpDown\global/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1:8808"
+2019/12/18 10:19:31 [error] 18928#26132: *2 directory index of "E:\UnityUpDown\global/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1:8808"
+2019/12/18 10:19:40 [error] 18928#26132: *2 directory index of "E:\UnityUpDown\global/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1:8808"
+2019/12/18 10:20:11 [error] 18928#26132: *2 directory index of "E:\UnityUpDown\global/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1:8808"
+2019/12/18 10:21:00 [error] 18928#26132: *2 directory index of "E:\UnityUpDown\global/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1:8808"
+2019/12/18 10:21:11 [error] 18928#26132: *2 CreateFile() "E:\UnityUpDown\global/index" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /index HTTP/1.1", host: "127.0.0.1:8808"
+2019/12/18 10:21:38 [error] 18928#26132: *2 CreateFile() "E:\UnityUpDown\global/index.html" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /index.html HTTP/1.1", host: "127.0.0.1:8808"
+2019/12/18 10:25:55 [error] 18928#26132: *15 directory index of "E:\UnityUpDown\global/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost:8808"
+2019/12/18 10:25:55 [error] 18928#26132: *15 CreateFile() "E:\UnityUpDown\global/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8808", referrer: "http://localhost:8808/"
+2019/12/18 11:00:08 [error] 18928#26132: *19 directory index of "E:\UnityUpDown\global/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost:8808"
+2019/12/18 11:01:25 [error] 18928#26132: *22 directory index of "E:\UnityUpDown\global/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1:8808"
+2019/12/18 11:01:31 [error] 18928#26132: *22 CreateFile() "E:\UnityUpDown\global/index" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /index HTTP/1.1", host: "127.0.0.1:8808"
+2019/12/18 11:01:36 [error] 18928#26132: *22 CreateFile() "E:\UnityUpDown\global/index.html" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /index.html HTTP/1.1", host: "127.0.0.1:8808"
+2019/12/18 11:02:12 [error] 18928#26132: *22 CreateFile() "E:\UnityUpDown\global/index.html" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /index.html HTTP/1.1", host: "127.0.0.1:8808"
+2019/12/18 11:02:47 [error] 18928#26132: *22 CreateFile() "E:\UnityUpDown\global/index.html" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /index.html HTTP/1.1", host: "127.0.0.1:8808"
+2019/12/18 11:04:16 [emerg] 19440#6160: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2019/12/18 11:04:16 [alert] 25164#21428: worker process 19440 exited with code 1
+2019/12/18 11:04:16 [alert] 25164#21428: could not respawn worker
+2019/12/18 11:04:50 [emerg] 22388#22216: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2019/12/18 11:05:02 [emerg] 15384#25368: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2019/12/18 11:06:02 [emerg] 19572#13400: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2019/12/18 11:06:48 [error] 26008#22308: *2 CreateFile() "E:\UnityUpDown\global/index.html" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /index.html HTTP/1.1", host: "127.0.0.1:8808"
+2019/12/18 11:07:01 [error] 26008#22308: *2 CreateFile() "E:\UnityUpDown\global/index.html" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /index.html HTTP/1.1", host: "127.0.0.1:8808"
+2019/12/18 11:07:05 [error] 26008#22308: *2 directory index of "E:\UnityUpDown\global/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1:8808"
